@@ -10,3 +10,7 @@ For more options run 'make usage'
 
 # Running the app
 Run : ./move_semantics_test.exe
+
+# Pre - Requisites
+Need of a c++ compilator which handles C++ 2014.
+
