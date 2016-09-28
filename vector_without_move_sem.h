@@ -39,6 +39,9 @@ namespace move_semantics_test {
 
     // Name getter for const
     virtual std::string getName() const;
+
+    // Sum of all the components
+    virtual double computeSum() const;
   };
 
 }  // namespace move_semantics_test

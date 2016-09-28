@@ -67,6 +67,16 @@ namespace move_semantics_test {
     return m_name;
   }
 
+  // Compute sum of all components
+  double VectorWithoutMoveSem::
+  computeSum() const
+  {
+    double sum{0};
+    for (auto _it(this->begin()); _it < this->end(); ++_it) {
+      sum += *_it;
+    }
+    return sum;
+  }
 }  // namespace move_semantics_test
 
 std::ostream& operator<<(std::ostream& stream, const move_semantics_test::VectorWithoutMoveSem& v)

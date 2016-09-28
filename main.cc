@@ -13,5 +13,7 @@ int main()
   testWithMoveCtor(huge_rdm_vector_a, huge_rdm_vector_b);
   testWithoutMoveOperator(huge_rdm_vector_a, huge_rdm_vector_b);
   testWithMoveOperator(huge_rdm_vector_a, huge_rdm_vector_b);
+  std::cout << "The sum of vector A is : " << huge_rdm_vector_a.computeSum() << std::endl;
+  std::cout << "The sum of vector B is : " << huge_rdm_vector_b.computeSum() << std::endl;
   return 0;
 }
