@@ -17,7 +17,7 @@ namespace move_semantics_test {
   VectorWithoutMoveSem::
   VectorWithoutMoveSem(const std::string& name) : base_t(), m_name(name)
   {
-    std::cout << "Use of minimal VectorWithoutMoveSem ctor for " << std::quoted(m_name) << "!" << std::endl;
+    std::cout << "Use of minimal VectorWithoutMoveSem ctor for " << m_name << "!" << std::endl;
   }
 
   // Usual ctor
@@ -25,7 +25,7 @@ namespace move_semantics_test {
   VectorWithoutMoveSem(const int& size, const std::string& name, const double& default_value, bool randomized)
       : base_t(static_cast<std::size_t>(size), default_value), m_name(name)
   {
-    std::cout << "Use of usual VectorWithoutMoveSem ctor for " << std::quoted(m_name) << "!" << std::endl;
+    std::cout << "Use of usual VectorWithoutMoveSem ctor for " << m_name << "!" << std::endl;
     if (randomized) {
       std::random_device rd;
       std::mt19937 gen(rd());
@@ -40,7 +40,7 @@ namespace move_semantics_test {
   VectorWithoutMoveSem::
   VectorWithoutMoveSem(const VectorWithoutMoveSem& origin): base_t(origin), m_name(origin.m_name + "_copy")
   {
-    std::cout << "Use of VectorWithoutMoveSem copy ctor for " << std::quoted(m_name) << "!" << std::endl;
+    std::cout << "Use of VectorWithoutMoveSem copy ctor for " << m_name << "!" << std::endl;
   }
 
   // Copy op

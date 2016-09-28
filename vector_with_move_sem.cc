@@ -32,7 +32,7 @@ namespace move_semantics_test {
   {
     dynamic_cast<std::vector<double>&>(*this) = std::move(origin);
     m_name = std::move(origin.m_name + "_move");
-    std::cout << "Use of move ctor for " << std::quoted(m_name) << "!" << std::endl;
+    std::cout << "Use of move ctor for " << m_name << "!" << std::endl;
     origin.m_name = "";
     if (origin.size() != 0) {
       std::cerr << "Move ctor failed! origin's size is not nil!" << std::endl;
